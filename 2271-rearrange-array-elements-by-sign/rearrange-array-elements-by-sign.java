@@ -10,11 +10,11 @@ class Solution {
                 if (nums[i]>0)
                 {
                 a[b]=nums[i];
-                b=b+2;
+                b+=2;
                 }
                 else {
                 a[c]=nums[i];
-                c=c+2;
+                c+=2;
                 }
 
             }
