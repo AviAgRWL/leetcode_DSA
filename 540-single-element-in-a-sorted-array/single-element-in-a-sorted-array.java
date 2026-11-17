@@ -1,25 +1,12 @@
 class Solution {
     public int singleNonDuplicate(int[] nums) {
-        int left = 0;
-        int right = nums.length - 1;
-
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-
-            // Make mid even
-            if (mid % 2 == 1) {
-                mid--;
-            }
-
-            if (nums[mid] == nums[mid + 1]) {
-                // Pair is correct, single is on the right
-                left = mid + 2;
-            } else {
-                // Pair is broken, single is on the left (or mid)
-                right = mid;
-            }
+        int  a=0,b=0;
+        b=nums[0];
+        for (int i =1;i<nums.length;i++)
+        {
+            a=nums[i];
+            b=b^a;
         }
-
-        return nums[left];
+        return b;
     }
 }
